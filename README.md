@@ -1,1 +1,1 @@
-# Leetcode-problems code simple explanation
+# Leetcode-problems simple explanation with code
