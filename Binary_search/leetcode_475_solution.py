@@ -1,4 +1,7 @@
-#........o(nlogn) time complexity+o(1)space complexity.................................
+#475. Heaters
+#problem_link:https://leetcode.com/problems/heaters/
+
+#........o(nlogn) time complexity+o(1)space complexity solution.................................
 
 def binary_search(house, heaters):
     left = 0
