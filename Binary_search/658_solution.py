@@ -21,7 +21,17 @@ arr[mid] < x < arr[mid+k]
 If both of the earlier condtions are not satisified, then we consider the distance of x from both the mid and mid+k . If x is closer to mid,similar to the 1st case, move it away from mid+k and move high to mid. else move low to mid+1.
 
 #................................code......................
-low = 0
+class Solution(object):
+    def findClosestElements(self, arr, k, x):
+        """
+        :type arr: List[int]
+        :type k: int
+        :type x: int
+        :rtype: List[int]
+        """
+        
+        
+        low = 0
         
         high = len(arr) - k
         
