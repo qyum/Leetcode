@@ -17,14 +17,14 @@ class TopVotedCandidate:
                 #print(cur_max,cur_win)
             self.time_winning[t] = cur_win
         self.times = times 
-        print(self.time_winning)
-        print(self.times)
+        #print(self.time_winning)
+        #print(self.times)
 
     def q(self, t: int) -> int:
         if t in self.time_winning:
             return self.time_winning[t]
         #print(self.time_winning)
-        print(t)
+        #print(t)
         i = bisect.bisect(self.times, t)
-        print("i",i)
+        #print("i",i)
         return self.time_winning[self.times[i-1]]
