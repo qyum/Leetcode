@@ -12,17 +12,7 @@ class Solution(object):
         st1=s1.split(" ")
         #print(st1)
         st2=s2.split(" ")
-        
-  
-        #for i in st1:
-            #if i not in st2:
-                #out.append(i)
-        #for j in st2:
-            #if j not in st1:
-                #out.append(j)
-        #print(out)
-        #return out
-        
+      
         d={}
         for i in st1:
             d[i]=d.get(i,0)+1
