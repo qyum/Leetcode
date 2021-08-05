@@ -13,7 +13,7 @@ class Solution(object):
         #print(st1)
         st2=s2.split(" ")
         
-        out=[]
+  
         #for i in st1:
             #if i not in st2:
                 #out.append(i)
