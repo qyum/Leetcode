@@ -1,5 +1,5 @@
 #dictionary solution
-#Tim complexity o(n) and space complexity o(1)
+#Time complexity o(n) and space complexity o(1)
 
 class Solution(object):
     def uncommonFromSentences(self, s1, s2):
