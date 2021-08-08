@@ -11,8 +11,8 @@ class Solution(object):
         char_count=Counter(chars)
         #print(char_count)
         for w in words:
-            print(Counter(w))
-            print(char_count==Counter(w))
+            #print(Counter(w))
+            #print(char_count==Counter(w))
             if Counter(w)&char_count==Counter(w):
                 #print(w)
                 sum+=len(w)
