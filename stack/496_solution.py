@@ -21,3 +21,10 @@ class Solution(object):
                 stack.pop()
                 
             stack.append(element)
+
+        #print(mapping)
+        
+        out = []
+        for element in nums1:
+            out.append(mapping[element])
+        return out
