@@ -7,23 +7,23 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        freqDict = defaultdict(int)
-        maxFreq = 0
-        maxLength = 0
-        start = end = 0
-        while end < len(s):
-            freqDict[s[end]] += 1
+        start, end= 0, 0
+        n, freq_map = len(s), defaultdict(int)
+        most_repeating_char, answer = 0, 0
+        
+        for end in range(n):
+            c = s[end]
+            freq_map[c] += 1
+            print(freq_map[c])
             
-            # maxFreq may be invalid at some points, but this doesn't matter
-            # maxFreq will only store the maxFreq reached till now
-            maxFreq = max(maxFreq, freqDict[s[end]])
+            # Most repeating char, which contributes to our answer
+            most_repeating_char = max(most_repeating_char, freq_map[c]) 
             
-            # maintain the substring length and slide the window if the substring is invalid
-            if ((end-start+1) - maxFreq) > k:
-                freqDict[s[start]] -= 1
+            # If the window has more than k chars other than most repeating one.
+            if end-start+1 - most_repeating_char > k:  
+                freq_map[s[start]] -= 1
                 start += 1
-            else:
-                maxLength = max(maxLength, end-start+1)
-            end += 1
             
-        return maxLength
+            answer = max(answer, end-start+1)
+    
+        return answer
