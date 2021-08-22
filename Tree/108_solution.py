@@ -4,13 +4,18 @@ class Solution(object):
         :type nums: List[int]
         :rtype: TreeNode
         """
-        def helper(left, right):
-            
-            if left <= right:
-                mid = left + (right - left) // 2 # or (@left + @right) // 2
-                return TreeNode(nums[mid],
-                               helper(left, mid - 1),
-                               helper(mid + 1, right))
-            return None         # TODO: is this necessary?
+        # base case
+        if not nums: 
+            return None
         
-        return helper(0, len(nums) - 1)
+        # getting the mid
+        mid = len(nums)//2
+        node = TreeNode(nums[mid])
+        
+        # left node is given the responsibility till mid, 
+        # but not including mid
+        node.left = self.sortedArrayToBST(nums[:mid])
+        # right node is given the responsibility from mid+1 
+        # till the end
+        node.right = self.sortedArrayToBST(nums[mid+1:])
+        return node
