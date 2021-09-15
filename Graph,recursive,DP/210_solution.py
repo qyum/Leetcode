@@ -24,7 +24,8 @@ class Solution:
             colors[node] = GREY # Set node as currently visiting
             
             for child in graph[node]:
-                if not dfs(child): return False # DFS search on all children to make sure no loops in child paths 
+                if not dfs(child): 
+                    return False # DFS search on all children to make sure no loops in child paths 
             colors[node] = BLACK
             if node not in self.result:
                 self.result.append(node) # If not added as part of a different search path, add now.
@@ -32,7 +33,8 @@ class Solution:
         
         for node in graph:
             if graph[node]:
-                if not dfs(node): return [] # Short circuit as failure if loop found in DFS
+                if not dfs(node): 
+                    return [] # Short circuit as failure if loop found in DFS
             else:
                 if node not in self.result: # Check if node has already been added in a previous DFS search
                     self.result.append(node)
