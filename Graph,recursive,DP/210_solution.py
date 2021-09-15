@@ -17,9 +17,12 @@ class Solution:
             graph[x].append(y)
             
         def dfs(node):
-            if colors[node] == BLACK: return True # Node has been visted previously. Exit with Success
-            if colors[node] == GREY: return False # Node is currently being visited in a DFS search oper
+            if colors[node] == BLACK: 
+                return True # Node has been visted previously. Exit with Success
+            if colors[node] == GREY: 
+                return False # Node is currently being visited in a DFS search oper
             colors[node] = GREY # Set node as currently visiting
+            
             for child in graph[node]:
                 if not dfs(child): return False # DFS search on all children to make sure no loops in child paths 
             colors[node] = BLACK
