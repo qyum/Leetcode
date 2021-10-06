@@ -1,3 +1,12 @@
+#O(N)->ST
+IDEA :
+1)First form the list of all rotten cells with their cell number and time as 0.
+2) Now poping one by one from left of queue of rotten list.
+3)Change this cell to empty and call Convert Function to change all the 4-Directional fresh cells(if exists) to empty and also add them in rotten cells. With time extended by 1.
+4) At last you will be with the last minute.
+5)Check if any cell is with fresh orange then return -1 else return the last minute.
+
+
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
          
