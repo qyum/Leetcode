@@ -10,9 +10,9 @@ class Solution(object):
         
         # Dict (DP) to hold trees 
         dp = collections.defaultdict(list)
-        # N == 1
+        #Build for N == 1
         dp[1] = [TreeNode(0)]
-        # N == 3
+        #Build for N == 3
         temp = TreeNode(0)
         temp.left = TreeNode(0)
         temp.right = TreeNode(0)
