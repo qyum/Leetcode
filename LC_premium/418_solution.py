@@ -4,7 +4,7 @@
 
 def  wordTyping(sentences,rows,col):
 	joinWord=" ".join(sentences)+" "
-	senLen=len(sentences)
+	senLen=len(joinWord)
 
 	totalLen=0
 	for rowIdx in range(rows):
