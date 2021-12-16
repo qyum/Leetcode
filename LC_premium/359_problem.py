@@ -1,6 +1,6 @@
 #leetcode premium problem(489)
 #logger rate limiter problem
-#O(n)T |O(N)S
+#O(1)T |O(N)S
 
 Class logger:
 	def __init__(self):
