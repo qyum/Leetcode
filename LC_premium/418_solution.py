@@ -24,7 +24,7 @@ def  wordTyping(sentences,rows,col):
 
 def  wordTyping(sentences,rows,col):
 	s=’ ‘ .join(sentences)+’ ‘
-	totalLen=len(sentences)
+	totalLen=len(s)
 	backtrack=[0]*len(totalLen)
 	
 	preTrack=-1
