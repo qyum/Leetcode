@@ -38,4 +38,4 @@ def  wordTyping(sentences,rows,col):
 		position  += col
 		position =position-backtrack[position %totalLen]
 
-	return (totalLen+1)//totalLen
+	return (position+1)//totalLen
